@@ -4,7 +4,7 @@ import re
 from django import forms
 from django.utils.translation import ugettext as _
 
-from templator.plantillas.models import TemplateContext, Template
+from templator.models import TemplateContext, Template
 
 
 class TemplateContextForm(forms.ModelForm):

@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseServerError
 from django.template.loader import render_to_string
 from django.utils import simplejson
 
-from templator.plantillas.reporter import ExceptionReporter
+from templator.reporter import ExceptionReporter
 
 
 SAFE_MIMES = (

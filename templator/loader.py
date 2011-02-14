@@ -7,7 +7,7 @@ from django.template.loader import (BaseLoader,
                                     find_template_loader,
                                     make_origin)
 
-from templator.plantillas.models import Template as TemplateModel
+from templator.models import Template as TemplateModel
 
 thread_context = threading.local()
 

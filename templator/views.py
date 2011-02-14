@@ -8,10 +8,10 @@ from django.template import RequestContext
 from django.shortcuts import get_object_or_404, redirect, render_to_response
 from django.utils.translation import ugettext as _
 
-from templator.plantillas import loader
-from templator.plantillas.forms import TemplateContextForm, TemplateForm
-from templator.plantillas.models import TemplateContext, Template
-from templator.plantillas.utils import (get_context_from_request,
+from templator import loader
+from templator.forms import TemplateContextForm, TemplateForm
+from templator.models import TemplateContext, Template
+from templator.utils import (get_context_from_request,
                                         template_to_response,
                                         get_object_or_none,
                                         uuid_hex,

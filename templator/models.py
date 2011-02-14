@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext as _
 
-from templator.plantillas.fields import UUIDField
+from templator.fields import UUIDField
 
 
 class TemplateContext(models.Model):

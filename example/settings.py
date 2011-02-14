@@ -24,7 +24,7 @@ USE_I18N = False
 USE_L10N = False
 
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'site_media')
-MEDIA_URL = '/site_media/'
+MEDIA_URL = '/media/'
 
 ROOT_URLCONF = 'templator.conf.urls'
 
@@ -48,7 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
-    'templator.plantillas',
+    'templator',
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+*.swo
+bin
+develop-eggs
+downloads
+eggs
+parts
+.installed.cfg
+*.db
