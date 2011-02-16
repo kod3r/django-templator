@@ -1,19 +1,30 @@
-Django Templator a.k.a. Django TemplateBin
+Django Templator
+================
 
-site: http://dash.darkrho.com/
-example: http://dash.darkrho.com/c/bdd2f30b00de4101b5239f9865117e32/
+:Website:
+    http://djangotemplator.appspot.com
+:Documentation:
+    
+:Author:
+    Rolando Espinoza La Fuente
+:Mantainer:
+    Mario César Señoranis Ayala
 
-This project allows to post collection of django templates 
-to render in the server-side. It handles exceptions gracefully.
+This project allows to post collection of django templates to render in the
+server-side. It handles exceptions gracefully.
 
-Requires python 2.6 and django 1.2.
+Requires Python 2.5 or superior and Django 1.2
 
-To run:
-    - copy local example settings into local directory:
-      $ cd templator/conf/local/
-      $ cp example/*.py .
+How to install
+--------------
 
-    - run the server
-      $ ./manage.py runserver
+Requirements
+~~~~~~~~~~~~
 
-Note: use the given template path in the extends/include tags.
+Configure and Install
+~~~~~~~~~~~~~~~~~~~~~
+
+How to run the example project
+------------------------------
+
+
