@@ -174,7 +174,7 @@ Show me exception:
 
         num_forms = len(template_forms)
 
-    return render_to_response('plantillas/form.html', {
+    return render_to_response('templator/form.html', {
         'uuid': uuid,
         'num_forms': num_forms,
         'context_form': context_form,
