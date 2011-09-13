@@ -106,11 +106,7 @@ def template_form(request, uuid):
                 # TODO: handle/pass form errors to client
                 return JsonResponse({'status': 'error'})
             else:
-                try:
-                    messages.error(request, _(u"Please correct errors below"))
-                except messages.api.MessageFailure:
-                    """GAE early compatibility with django.contrib.messages app"""
-                    pass
+                messages.error(request, _(u"Please correct errors below"))
     else:
         # defaults
         initial_context = {
