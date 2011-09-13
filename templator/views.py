@@ -151,8 +151,7 @@ Show me exception:
         }
 
         context_form = TemplateContextForm(prefix='c',
-                                           instance=context_obj,
-                                           initial=initial_context)
+                                           instance=context_obj)
 
         template_forms = []
 
