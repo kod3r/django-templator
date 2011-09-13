@@ -24,13 +24,13 @@ class TemplateContextForm(forms.ModelForm):
                 else:
                     message = _(u"context must be a dictionary")
                     raise forms.ValidationError(message)
-            except SyntaxError as e:
+            except SyntaxError, e:
                 message = _(u"you have a syntax error at line %d column %d")
                 raise forms.ValidationError(message % (e.lineno, e.offset))
-            except ValueError as e:
+            except ValueError, e:
                 message = _(u"value error: %s") % str(e)
                 raise forms.ValidationError(message)
-            except Exception as e:
+            except Exception, e:
                 message = _(u"unknown error: %s") % str(e)
                 raise forms.ValidationError(message)
         else:

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import with_statement
 import ast
 
 from django.contrib import messages
@@ -21,7 +22,7 @@ def validate_context(request):
         try:
             ast.literal_eval(context)
             data['status'] = 'ok'
-        except SyntaxError as e:
+        except SyntaxError, e:
             label = 'Syntax error: '
             msg = '<pre>%s%s<br/>%s</pre>'
             data['message'] = msg % (label, e.text,
