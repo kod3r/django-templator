@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
 import ast
-import itertools
 
 from django.contrib import messages
-from django.http import Http404
 from django.template import RequestContext
-from django.shortcuts import get_object_or_404, redirect, render_to_response
+from django.shortcuts import redirect, render_to_response
 from django.utils.translation import ugettext as _
 
 from templator import loader
 from templator.forms import TemplateContextForm, TemplateForm
 from templator.models import TemplateContext, Template
-from templator.utils import (get_context_from_request,
-                                        template_to_response,
+from templator.utils import (template_to_response,
                                         get_object_or_none,
                                         uuid_hex,
                                         JsonResponse)
@@ -60,6 +57,7 @@ def template_form(request, uuid):
     else:
         is_owner = False
 
+    #TODO: Never used
     is_owner = uuid in request.session['templates']
 
     if request.POST:
@@ -108,7 +106,11 @@ def template_form(request, uuid):
                 # TODO: handle/pass form errors to client
                 return JsonResponse({'status': 'error'})
             else:
-                messages.error(request, _(u"Please correct errors below"))
+                try:
+                    messages.error(request, _(u"Please correct errors below"))
+                except messages.api.MessageFailure:
+                    """GAE early compatibility with django.contrib.messages app"""
+                    pass
     else:
         # defaults
         initial_context = {
